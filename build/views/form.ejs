@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10 mx-auto">
+                <h4 class="mx-auto" style="text-align: center;">Formulario de registro</h4>
+                <form action="/form" method="POST">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Ingrese su correo"
+                            name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Clave:</label>
+                        <input type="password" class="form-control" id="pwd" placeholder="Ingrese su clave" name="pass" required>
+                    </div>
+
+                    <!-- select -->
+                    <div class="form-group">
+                        <label for="sel1">Ciudad:</label>
+                        <select class="form-control" id="sel1" name="ciudad" required>
+                            <option value="guayaquil">Guayaquil</option>
+                            <option value="quito">Quito</option>
+                            <option value="manta">Manta</option>
+                        </select>
+                    </div>
+
+                    <!-- radio -->
+                    <label>Color de fondo</label>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="optradio" value="rojo" required>Rojo
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="optradio" value="azul">Azul
+                        </label>
+                    </div>
+                    <div class="form-check disabled">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="optradio" value="negro">Negro
+                        </label>
+                    </div>
+
+                    <!-- check -->
+                    <div class="form-group form-check mt-2">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" name="politicas" required>Acepto políticas de
+                            uso
+                        </label>
+                    </div>
+
+                    <ion class="row">
+                        <ion class="col-sm-12 mx-auto" style="text-align: center;">
+                            <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+                        </ion>
+                    </ion>
+                </form>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+
+    </div>
+</body>
+
+</html>
